@@ -1,0 +1,40 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>Hello World</h1>
+    <p class="lead">MEAN + Socket.io</p>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Features:</h1>
+      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in awesomeThings">
+        <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}<button type="button" class="close" ng-click="deleteThing(thing)">&times;</button></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <form class="thing-form">
+    <label>Syncs in realtime across clients</label>
+    <p class="input-group col-lg-4 col-md-4 col-sm-5">
+      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="newThing.name">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" ng-click="addThing()">Add New</button>
+      </span>
+    </p>
+    <p class="input-group col-lg-4 col-md-4 col-sm-5">
+      <textarea  class="form-control" placeholder="Add a tooltip here" ng-model="newThing.info"></textarea>
+    </p>
+  </form>
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <p>Angular Fullstack |
+        <a href="https://twitter.com/donaldparkerii">@donaldparkerii</a> |
+      </p>
+  </div>
+</footer>
